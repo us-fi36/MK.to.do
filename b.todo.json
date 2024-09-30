@@ -1,5 +1,9 @@
 [
-            ["id" => "someuniqueId", "title" => "mach ne liste"],
-            ["id" => "someuniqueId2", "title" => "erste Aufgabe Part 2"],
-           
+    
+        {"id": "someuniqueId", "title" : "mach ne liste"},
+        {"id": "someuniqueId2", "title": "erste Aufgabe Part 2"}
 ]
+       
+
+
+
