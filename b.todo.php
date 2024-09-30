@@ -13,17 +13,14 @@ function write_log($action, $data) {
 
 
 // Read content of the file and decode JSON data to an array.
+
 $todo_file = 'todos.json';
 $todo_items = json_decode(file_get_contents($todo_file), true);
+ 
 
 switch ($_SERVER["REQUEST_METHOD"]) {
     case "GET":
 
-        $todo_items =[
-            ["id" => "someuniqueId", "title" => "erste Aufgabe"],
-            ["id" => "someuniqueId2", "title" => "erste Aufgabe Part 2"],
-            ["id" => "someuniqueId3", "title" => "erste Aufgabe Part 3"]
-        ];
         // Get Todo's (READ)
         echo json_encode($todo_items);
         write_log("READ", $todo_items);
