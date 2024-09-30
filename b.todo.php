@@ -16,6 +16,10 @@ function write_log($action, $data) {
 
 $todo_file = 'todos.json';
 $todo_items = json_decode(file_get_contents($todo_file), true);
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    // Rückgabe der TODOs
+    echo json_encode($todo_items);
  
 
 switch ($_SERVER["REQUEST_METHOD"]) {
